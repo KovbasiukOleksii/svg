@@ -1,0 +1,129 @@
+.loader{
+  display:inline-block;
+  width: 150px;
+  fill: none;
+  stroke: orange;
+  stroke-width: 3px;
+  stroke-dasharray: 68%;
+  stroke-linecap:round;
+  animation: rotateCircle 2s linear 0s infinite;
+}
+
+@keyframes rotateCircle
+{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.cartman_task4 {
+    background: #F6BC9F;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+}
+.button{
+  margin-bottom: 20px;
+  margin-left: 100px;
+  display:block;
+  width:300px;
+  height:65px;
+  color: #FF0067;
+  border:4px solid;
+  border-radius:4px;
+  font-size: 19px;
+  letter-spacing:2px;
+  font-weight:bold;
+}
+
+.button-color{
+    background: white;
+    transform: translateZ(0);
+    border-color:#FF0067;
+    transition-property: color;
+}
+
+.button-color:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    right: -1px;
+    opacity:0.7;
+    background: #FF0067;
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition: transform 0.5s ease-out;
+}
+.button-color:hover {
+    color: white;
+}
+
+.button-color:hover:before, 
+.button-color:focus:before, 
+.button-color:active:before {
+    transform: scaleX(1);
+    opacity:1;
+}
+
+.button-two{
+  border-color: #6720AC;
+  color: #6720AC;
+}
+.button-two::before{
+  background:#6720AC;
+}
+.burger__menu
+{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.burger
+{
+  width: 100px;
+  height: 100px;
+}
+
+.burger .burger__top,
+.burger .burger__bottom
+{
+  transition: transform 0.5s ease-in 0s;
+}
+
+.burger:hover .burger__middle
+{
+  transition: opacity 0.2s ease-out 0.2s;
+}
+
+.burger .burger__top
+{
+  transform-origin: 50% 16.66%;
+  transform: translateY(0) rotate(0deg);
+}
+
+.burger:hover .burger__top
+{
+  transform: translateY(33%) rotate(45deg);
+}
+
+.burger .burger__bottom
+{
+  transform-origin: 50% 83.34%;
+  transform: translateY(0) rotate(0deg);
+}
+
+.burger:hover .burger__bottom
+{
+  transform: translateY(-33%) rotate(-45deg);
+}
+
+.burger:hover .burger__middle
+{
+  opacity: 0;
+}
